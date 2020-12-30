@@ -32,7 +32,7 @@ flags.DEFINE_float('score', 0.50, 'score threshold')
 flags.DEFINE_boolean('count', False, 'count objects within video')
 flags.DEFINE_boolean('dont_show', False, 'dont show video output')
 flags.DEFINE_boolean('info', False, 'print info on detections')
-flags.DEFINE_boolean('crop', False, 'crop detections from images')
+flags.DEFINE_string('crop', os.getcwd(), 'crop detections from images')
 flags.DEFINE_boolean('plate', False, 'perform license plate recognition')
 
 def main(_argv):
