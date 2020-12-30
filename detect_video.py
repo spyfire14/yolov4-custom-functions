@@ -33,6 +33,7 @@ flags.DEFINE_boolean('count', False, 'count objects within video')
 flags.DEFINE_boolean('dont_show', False, 'dont show video output')
 flags.DEFINE_boolean('info', False, 'print info on detections')
 flags.DEFINE_string('crop', os.getcwd(), 'crop detections from images')
+flags.DEFINE_integer('framenum', 25, 'how often a photo is taken')
 flags.DEFINE_boolean('plate', False, 'perform license plate recognition')
 
 def main(_argv):
@@ -134,7 +135,7 @@ def main(_argv):
         # if crop flag is enabled, crop each detection and save it as new image
         if FLAGS.crop:
             crop_selectedPath = FLAGS.crop
-            crop_rate = 30 # capture images every so many frames (ex. crop photos every 150 frames)
+            crop_rate = FLASGS.framenum # capture images every so many frames (ex. crop photos every 150 frames)
             crop_path = os.path.join(FLAGS.crop, 'detections', 'crop', video_name)
             try:
                 os.mkdir(crop_path)
