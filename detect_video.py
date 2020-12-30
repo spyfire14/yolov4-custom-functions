@@ -135,7 +135,7 @@ def main(_argv):
         # if crop flag is enabled, crop each detection and save it as new image
         if FLAGS.crop:
             crop_selectedPath = FLAGS.crop
-            crop_rate = FLASGS.framenum # capture images every so many frames (ex. crop photos every 150 frames)
+            crop_rate = FLAGS.framenum # capture images every so many frames (ex. crop photos every 150 frames)
             crop_path = os.path.join(FLAGS.crop, 'detections', 'crop', video_name)
             try:
                 os.mkdir(crop_path)
