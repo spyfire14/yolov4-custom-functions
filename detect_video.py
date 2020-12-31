@@ -147,7 +147,7 @@ def main(_argv):
                     os.mkdir(final_path)
                 except FileExistsError:
                     pass          
-                crop_objects(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB), pred_bbox, final_path, allowed_classes)
+                crop_objects(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB), pred_bbox, final_path, allowed_classes, frame_num)
             else:
                 pass
 
